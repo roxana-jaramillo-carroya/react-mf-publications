@@ -24,11 +24,17 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [
+          //MiniCssExtractPlugin.loader,
+          'style-loader', 'css-loader', 'sass-loader', 'postcss-loader'
+        ]
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [
+         // MiniCssExtractPlugin.loader,
+          "css-loader", "postcss-loader",
+        ],
       },
       {
         test: /\.(gif|svg|jpg|png)$/,
@@ -49,7 +55,8 @@ module.exports = {
       shared: ['react', 'react-dom', 'react-router-dom']
     }),
     new HtmlWebpackPlugin({
-      template: './public/index.html'
+      template: './public/index.html',
+      filename: "./index.html"
     })
   ]
 };
