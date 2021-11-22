@@ -1,117 +1,76 @@
 @import "../../assets/styles/global/base.scss";
-
-.content-current-card {
-    //height: 518px;
-    .card {
-        width: 304px;
-        height: 518px;
-        border-radius: 10px;
-        box-shadow: 0 16px 16px 0 rgba(46, 103, 174, 0.1);
-        background-color: $CL0;
-        position: relative;
-
-        .rectangle-sell {
-            width: 150px;
-            height: 19px;
-            margin: 0 72px 21px 63px;
-            padding: 0px 9px 4px 10px;
-            object-fit: contain;
-            border-radius: 10px;
-        }
-
-        .main-label {
+.card {
+	width: 304px;
+	height: 518px;
+	box-shadow: 0 16px 16px 0 rgba(46, 103, 174, 0.1);
+	.rectangle-ribbon {
+		width: 150px;
+		height: 19px;
+		margin: 0 72px 21px 63px;
+		padding: 0px 9px 4px 10px;
+        .text-ribbon {
             font-family: Avenir;
             font-size: 10px;
-            font-weight: 900;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: 0.91px;
-            text-align: center;
-            color: $CL0;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            width: 90%;
+            justify-content: center;
         }
+	}
 
-        .publish-vehicle {
-            width: 234px;
-            height: 84px;
-            left: 37px;
-            top: 40px;
-            position: absolute;
-            text-align: center;
-            .text-publish {
-                font-family: Avenir;
-                font-size: 26px;
-                font-weight: 900;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: 1.08;
-                letter-spacing: normal;
-                text-align: center;
-                color: $I850;
-            }
-        }
+	.title {
+		color: $I850;
+        line-height: 1.08;
+	}
+	img.card-publish {
+		width: 211px;
+		height: 211px;
+		object-fit: contain;
+		position: absolute;
+		top: 136px;
+		left: 47px;
+	}
+	img.rectangle-background {
+		width: 270px;
+		height: 214px;
+		top: 202px;
+		left: 17px;
+	}
+	.rectangle-gradient {
+		width: 285px;
+		height: 147px;
+		background-image: linear-gradient(to bottom, $CL0, rgba(255, 255, 255, 0) 99%);
+		position: absolute;
+		top: 196px;
+		left: 14px;
+	}
+	.description {
+		width: 244px;
+		height: 54px;
+		position: absolute;
+		top: 343px;
+		left: 30px;
+		.text-description {
+			font-family: Avenir-Roman;
+			line-height: 1.29;
+		}
+		.text-description span {
+			font-family: Avenir;
+		}
+	}
+	.btn-content {
+		position: absolute;
+		top: 436px;
+		cy-button {
+			margin: auto;
+			width: 226px;
+		}
+	}
+}
 
-        img.card-publish {
-            width: 211px;
-            height: 211px;
-            object-fit: contain;
-            position: absolute;
-            top: 136px;
-            left: 47px;
-        }
-
-        img.rectangle-background {
-            width: 270px;
-            height: 214px;
-            object-fit: contain;
-            opacity: 0.5;
-            border-radius: 10px;
-            border: solid 1px $CL800;
-            background-color: $CL400;
-            position: absolute;
-            top: 202px;
-            left: 17px;
-        }
-
-        .rectangle-gradient {
-            width: 285px;
-            height: 147px;
-            background-image: linear-gradient(to bottom, $CL0, rgba(255, 255, 255, 0) 99%);
-            position: absolute;
-            top: 196px;
-            left: 14px;
-        }
-
-        .receive-offers {
-            width: 244px;
-            height: 54px;
-            position: absolute;
-            top: 343px;
-            left: 30px;
-            .text-receive-offers {
-                font-family: Avenir-Roman;
-                font-size: 14px;
-                font-weight: normal;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: 1.29;
-                letter-spacing: normal;
-                color: $CD600;
-                .highlight {
-                    font-family: Avenir;
-                    font-weight: 900;
-                    color: $R400;
-                }
-            }
-        }
-
-        .btn-card {
-            position: absolute;
-            top: 436px;
-            left: 39px;
-        }
+@media (min-width: 768px) {
+    .card:hover {
+        top: -10px;
+        box-shadow: 0 18px 18px 0 rgba(46, 103, 174, 0.16);
     }
 }
+
+

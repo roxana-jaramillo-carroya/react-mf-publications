@@ -1,65 +1,45 @@
 import React from 'react';
 import './Card.scss';
-// import rectangleRed from '../../assets/images/card/rectangle-red.png';
-// import rectangle2xRed from '../../assets/images/card/rectangle@2x-red.png';
-// import rectangle3xRed from '../../assets/images/card/rectangle@3x-red.png';
-import rectangleGray from '../../assets/images/card/rectangle-gray.svg';
 import rectangleBackground from '../../assets/images/card/rectangle-background.svg';
-// import rectangleGray from '../../assets/images/card/rectangle-gray.png';
-// import rectangle2xGray from '../../assets/images/card/rectangle@2x-gray.png';
-// import rectangle3xGray from '../../assets/images/card/rectangle@3x-gray.png';
-import cardPublicar from '../../assets/images/card/card-publicar.png';
-import cardPublicar2x from '../../assets/images/card/card-publicar@2x.png';
-import cardPublicar3x from '../../assets/images/card/card-publicar@3x.png';
+import arrow from '../../assets/images/icons/cy_icon_chevron_right.svg';
 
-
-export default (): JSX.Element => {
+export default ({ values, assets }) => {
     return (
         <div>
-            <div className="content-current-card">
-                <div className="card">
-                    <img
-                        className="rectangle-sell"
-                        src={rectangleGray}
-                    />
-                    <span className="main-label">VENDER</span>
-                    <div className="publish-vehicle">
-                        <span className="text-publish">
-                            Publica tu vehículo de una forma ágil y efectiva.
+            <div className="cy-flex cy-relative cy-rounded-xl cy-bg-CL-0 card cy-group">
+                <div className={`cy-flex cy-relative cy-rounded-b-xl rectangle-ribbon cy-bg-${assets.secondaryColor} sm:cy-bg-CD-600 sm:group-hover:cy-bg-${assets.secondaryColor}`}>
+                    <span className="cy-flex cy-absolute cy-font-black cy-text-CL-0 cy-pt-4 cy-tracking-wider text-ribbon">{values.labelRibbon}</span>
+                </div>
+                <div className="cy-flex cy-absolute cy-text-center cy-top-40">
+                    <cy-text class="cy-text-2xl cy-font-black cy-pr-40 cy-pl-40 title">
+                        {values.title}
+                    </cy-text>
+                </div>
+                <img
+                    className="cy-absolute cy-object-contain cy-border cy-border-solid cy-border-CL-400 cy-rounded-xl cy-opacity-50 rectangle-background"
+                    src={rectangleBackground}
+                />
+                <div className="rectangle-gradient"></div>
+                <img
+                    className="card-publish"
+                    src={assets.imgCard}
+                    srcSet={`${assets.imgCard2x} 2x, ${assets.imgCard3x} 3x`}
+                />
+                <div className="description">
+                    <span className="cy-text-sm cy-text-CD-600 text-description">
+                        {values.descriptionStart}<span className={`cy-font-black cy-text-${assets.secondaryColor}`}>{values.descriptionHighlight}</span> {values.descriptionEnd}
+                    </span>
+                </div>
+                <div className="cy-w-full btn-content">
+                    {<cy-button type="tertiary" size="tag" variant="" onClick={open}>
+                        <span className="cy-whitespace-nowrap cy-w-full">
+                            {values.labelButton}
                         </span>
-                    </div>
-                    <img
-                        className="rectangle-background"
-                        src={rectangleBackground}
-                    />
-                    <div className="rectangle-gradient"></div>
-                    <img
-                        className="card-publish"
-                        src={cardPublicar}
-                        srcSet={`${cardPublicar2x} 2x, ${cardPublicar3x} 3x`}
-                    />
-                    <div className="receive-offers">
-                        <span className="text-receive-offers">
-                            Recibe ofertas de <span className="highlight">compradores interesados</span> en el vehículo que tienes. ¡Anímate y publica con nosotros!
-                        </span>
-                    </div>
-                    <div className="btn-card">
-                        {<cy-button type="tertiary" size="tag" variant="" onClick={open}>
-                            <span className="cy-whitespace-nowrap cy-w-full">
-                                Publicar ahora
-                            </span>
-                            {/* Falta flechita de botón */}
-                        </cy-button>}
-                        {/* <button
-                            className="primary gray"
-                        >
-                            <h3>Publicar ahora</h3>
-                            <span className="icon icon-cy_icon_chevron_right arrow"></span>
-                        </button> */}
-                    </div>
+                        <img src={arrow} alt=">" className="cy-absolute cy-top-0"></img>
+                    </cy-button>}
                 </div>
             </div>
-        </div >
+        </div>
 
     );
 };

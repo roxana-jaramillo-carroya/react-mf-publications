@@ -12,10 +12,10 @@ export default ({ navigate }: { navigate: (route: string) => void }): JSX.Elemen
   return (
     <div className="app1">
 
-      {/* <Menu />
-      <LandingPublish /> */}
+       <Menu />
+      <LandingPublish /> 
 
-      <Test />
+      {/* <Test /> */}
 
 
 
