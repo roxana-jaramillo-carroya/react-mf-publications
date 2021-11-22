@@ -14,10 +14,10 @@ const Test = () => {
           Publicar mi carro
         </span>
       </cy-button> */}
-            <cy-text class="cy-text-20 sm:cy-text-24 lg:cy-text-26 cy-mb-16 md:cy-mb-24 lg:cy-mb-36 cy-text-center md:cy-text-left cy-text-H-800 cy-font-medium cy-text-R-800">
-                Haz parte de la vitrina digital más ambiciosa del sector de la0
+            <cy-text class="cy-text-16 sm:cy-text-24 lg:cy-text-26 cy-mb-16 md:cy-mb-24 lg:cy-mb-36 cy-text-center md:cy-text-left cy-text-H-800 cy-font-medium">
+                Haz parte de la vitrina digital más ambiciosa del sector de la
                 movilidad en Colombia.
-            </cy-text>
+              </cy-text>
 
             <cy-text class="cy-text-16 cy-text-center md:cy-text-left cy-text-R-400 cy-font-medium">
                 ¿Quieres ver opciones de financiación de otros bancos para tu
@@ -34,16 +34,16 @@ const Test = () => {
                 and an optimized production build.
             </div>
 
-            <div className="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
-                <div className="sm:flex sm:items-center px-6 py-4">
-                    <img className="block h-16 sm:h-24 rounded-full mx-auto mb-4 sm:mb-0 sm:mr-4 sm:ml-0" src="https://avatars2.githubusercontent.com/u/4323180?s=400&u=4962a4441fae9fba5f0f86456c6c506a21ffca4f&v=4" alt="" />
-                    <div className="text-center sm:text-left sm:flex-grow">
-                        <div className="mb-4">
-                            <p className="text-xl leading-tight">Adam Wathan</p>
-                            <p className="text-sm leading-tight text-grey-dark">Developer at NothingWorks Inc.</p>
+            <div className="cy-bg-white cy-mx-auto cy-max-w-sm cy-shadow-lg cy-rounded-lg cy-overflow-hidden">
+                <div className="cy-sm:flex cy-sm:items-center cy-px-6 cy-py-4">
+                    <img className="cy-block cy-h-16 cy-sm:h-24 cy-rounded-full cy-mx-auto cy-mb-4 cy-sm:mb-0 cy-sm:mr-4 cy-sm:ml-0" src="https://avatars2.githubusercontent.com/u/4323180?s=400&u=4962a4441fae9fba5f0f86456c6c506a21ffca4f&v=4" alt="" />
+                    <div className="cy-text-center cy-sm:text-left cy-sm:flex-grow">
+                        <div className="cy-mb-4">
+                            <p className="cy-text-xl cy-leading-tight">Adam Wathan</p>
+                            <p className="cy-text-sm cy-leading-tight cy-text-grey-dark">Developer at NothingWorks Inc.</p>
                         </div>
                         <div>
-                            <button className="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white">Message</button>
+                            <button className="cy-text-xs cy-font-semibold cy-rounded-full cy-px-4 cy-py-1 cy-leading-normal cy-bg-white cy-border cy-border-purple cy-text-purple cy-hover:bg-purple cy-hover:text-white">Message</button>
                         </div>
                     </div>
                 </div>
